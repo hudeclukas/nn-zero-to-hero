@@ -1,0 +1,24 @@
+version: "3.10"
+services:
+  torchtrainer:
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    entrypoint:
+    - sleep
+    - infinity
+    image: pytorch/pytorch:1.13.1-cuda11.6-cudnn8-runtime
+    ports: 
+      - 8008:8008
+    init: true
+    volumes:
+    - type: bind
+      source: ./
+      target: /nn-repo
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              capabilities: [gpu]
+              device_ids: ['0']

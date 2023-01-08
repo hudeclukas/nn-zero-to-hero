@@ -1,0 +1,7 @@
+torch >=1.13,<1.14
+opencv-python
+scikit-image
+pandas
+tqdm
+jupyter
+notebook
