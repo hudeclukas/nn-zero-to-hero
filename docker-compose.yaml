@@ -17,6 +17,8 @@ services:
       target: /nn-repo
     deploy:
       resources:
+        limits:
+          memory: 6G
         reservations:
           devices:
             - driver: nvidia
