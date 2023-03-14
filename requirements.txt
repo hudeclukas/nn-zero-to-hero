@@ -7,4 +7,3 @@ jupyter
 notebook
 plotly
 torchmetrics
-tqdm

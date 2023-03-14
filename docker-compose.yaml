@@ -15,6 +15,9 @@ services:
     - type: bind
       source: ./
       target: /nn-repo
+    - type: bind
+      source: ./data
+      target: /nn-repo/data
     deploy:
       resources:
         limits:
